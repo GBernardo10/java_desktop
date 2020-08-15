@@ -1,0 +1,37 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    def spring_version = "2.3.2.RELEASE"
+    def mysql_version = "8.0.20"
+    def lombok_version = "1.18.4"
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa:$spring_version"
+    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+    compile group: 'mysql', name: 'mysql-connector-java', version: "$mysql_version"
+    annotationProcessor "org.projectlombok:lombok:$lombok_version"
+    compileOnly "org.projectlombok:lombok:$lombok_version"
+
+
+
+
+
+}
+
+javafx {
+    version = "11"
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+mainClassName = 'com.bny.MainApp'

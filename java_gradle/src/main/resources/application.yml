@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/black_yellow
+    username: gesuvs
+    password: 968778
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
